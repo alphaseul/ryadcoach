@@ -1,11 +1,11 @@
 import React from "react";
 import "./Navbar.css";
 import { CgProfile } from "react-icons/cg";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Dropdown } from "react-bootstrap";
 
 function NavBar() {
   return (
-    <header id="header" className="container">
+    <div id="header" className="container">
       <Navbar expand="lg">
         <h1 className="logo me-auto">
           <a href="index.html">
@@ -14,7 +14,7 @@ function NavBar() {
         </h1>
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <a href="/#" className="logo me-auto mobile-nav">
+          <a href="/#" className="logo me-auto">
             <img src=" " alt="" />
           </a>
           <nav className="nav-menu">
@@ -41,25 +41,20 @@ function NavBar() {
           </nav>
         </Navbar.Collapse>
         <nav className="nav-menu ">
-          <ul>
-            <li className="drop-down">
-              <a href="/#">
-                <CgProfile size="30px" />
-              </a>
-              <ul>
-                <li>
-                  <a href="/#">Inscription</a>
-                </li>
-                <li>
-                  <a href="/#">Connexion</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <Dropdown>
+            <Dropdown.Toggle variant=" " id="dropdown-basic">
+              <CgProfile size="30px" />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Inscription</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">connexion</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </nav>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
       </Navbar>
-    </header>
+    </div>
   );
 }
 
