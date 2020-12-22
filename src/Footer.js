@@ -9,15 +9,16 @@ function Footer() {
           <div class="row">
             <div class="col-lg-3 col-md-6 footer-contact">
               <h3>
-                Presento<span>.</span>
+                Ryad Coach Sportif<span>.</span>
               </h3>
               <p>
-                A108 Adam Street <br />
-                New York, NY 535022
+                xxxxxxxxxxxxx <br />
+                xxxxxxxxxxxx
                 <br />
-                United States <br />
+                xxxxxxxxx
                 <br />
-                <strong>Phone:</strong> +1 5589 55488 55
+                <br />
+                <strong>Phone:</strong> xxxxxxxxxxxxxx
                 <br />
                 <strong>Email:</strong> info@example.com
                 <br />
@@ -45,7 +46,7 @@ function Footer() {
             </div>
 
             <div class="col-lg-4 col-md-6 footer-newsletter">
-              <h4>Join Our Newsletter</h4>
+              <h4>Notre Newsletter</h4>
               <p>
                 Tamen quem nulla quae legam multos aute sint culpa legam noster
                 magna
