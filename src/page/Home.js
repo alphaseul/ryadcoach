@@ -14,7 +14,7 @@ function Home() {
   }, []);
 
   return (
-    <body>
+    <div>
       <section id="hero" className="d-flex align-items-center">
         <div className="container " data-aos="zoom-out" data-aos-delay="100">
           <div className="row">
@@ -106,7 +106,7 @@ function Home() {
           <div className="container" data-aos="fade-up">
             <div className="tab-content">
               <div className="tab-pane active show" id="tab-1">
-                <div className="row">
+                <div>
                   <Carousel>
                     <Carousel.Item>
                       <img
@@ -860,7 +860,7 @@ function Home() {
           </div>
         </section>
       </main>
-    </body>
+    </div>
   );
 }
 
