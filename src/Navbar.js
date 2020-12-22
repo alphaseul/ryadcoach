@@ -39,7 +39,7 @@ function Navbar() {
             </li>
             <li className="drop-down">
               <a href="/#">
-                <CgProfile />
+                <CgProfile size="30px" />
               </a>
               <ul>
                 <li>
