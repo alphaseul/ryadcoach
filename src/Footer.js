@@ -4,10 +4,10 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 footer-contact">
               <h3>
                 Ryad Coach Sportif<span>.</span>
               </h3>
@@ -25,27 +25,30 @@ function Footer() {
               </p>
             </div>
 
-            <div class="col-lg-2 col-md-6 footer-links">
+            <div className="col-lg-2 col-md-6 footer-links">
               <h4>Liens Utiles</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Accueil</a>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="/#">Accueil</a>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">A propos</a>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="/#">A propos</a>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="/#">Services</a>
                 </li>
 
                 <li>
-                  <i class="bx bx-chevron-right"></i>{" "}
-                  <a href="#">Privacy policy</a>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="/#">Privacy policy</a>
                 </li>
               </ul>
             </div>
 
-            <div class="col-lg-4 col-md-6 footer-newsletter">
+            <div className="col-lg-4 col-md-6 footer-newsletter">
               <h4>Notre Newsletter</h4>
               <p>
                 Tamen quem nulla quae legam multos aute sint culpa legam noster
@@ -60,9 +63,9 @@ function Footer() {
         </div>
       </div>
 
-      <div class="container d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-left">
-          <div class="copyright">
+      <div className="container d-md-flex py-4">
+        <div className="me-md-auto text-center text-md-left">
+          <div className="copyright">
             &copy; Copyright{" "}
             <strong>
               <span>qrcode-protect</span>
@@ -70,7 +73,7 @@ function Footer() {
             . All Rights Reserved
           </div>
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0"></div>
+        <div className="social-links text-center text-md-right pt-3 pt-md-0"></div>
       </div>
     </footer>
   );
