@@ -18,7 +18,7 @@ function Navbar() {
 
         <nav className="nav-menu d-none d-lg-block">
           <ul>
-            <li className="active">
+            <li>
               <a href="#header">Acceuil</a>
             </li>
             <li>
