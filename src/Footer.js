@@ -75,6 +75,9 @@ function Footer() {
         </div>
         <div className="social-links text-center text-md-right pt-3 pt-md-0"></div>
       </div>
+      <a href="/#" class="back-to-top">
+        <i class="icofont-simple-up"></i>
+      </a>
     </footer>
   );
 }

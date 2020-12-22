@@ -1,42 +1,47 @@
 import React from "react";
 import "./Navbar.css";
 import { CgProfile } from "react-icons/cg";
+import { Navbar } from "react-bootstrap";
 
-function Navbar() {
+function NavBar() {
   return (
-    <header id="header" className="">
-      <div className="container d-flex align-items-center">
+    <header id="header" className="container">
+      <Navbar expand="lg">
         <h1 className="logo me-auto">
           <a href="index.html">
             Ryad Coach Sportif<span>.</span>
           </a>
         </h1>
 
-        <a href="index.html" className="logo me-auto">
-          <img src="assets/img/logo.png" alt="" />
-        </a>
-
-        <nav className="nav-menu d-none d-lg-block">
+        <Navbar.Collapse id="basic-navbar-nav">
+          <a href="/#" className="logo me-auto mobile-nav">
+            <img src=" " alt="" />
+          </a>
+          <nav className="nav-menu">
+            <ul>
+              <li>
+                <a href="#header">Acceuil</a>
+              </li>
+              <li>
+                <a href="#about">A propos</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#pricing">Abonnements</a>
+              </li>
+              <li>
+                <a href="blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </Navbar.Collapse>
+        <nav className="nav-menu ">
           <ul>
-            <li>
-              <a href="#header">Acceuil</a>
-            </li>
-            <li>
-              <a href="#about">A propos</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#pricing">Abonnements</a>
-            </li>
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
             <li className="drop-down">
               <a href="/#">
                 <CgProfile size="30px" />
@@ -52,9 +57,10 @@ function Navbar() {
             </li>
           </ul>
         </nav>
-      </div>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      </Navbar>
     </header>
   );
 }
 
-export default Navbar;
+export default NavBar;
