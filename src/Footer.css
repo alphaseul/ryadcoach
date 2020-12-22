@@ -9,7 +9,7 @@
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #e8be82;
+  background: #ffa500;
 }
 
 #footer .footer-top .footer-contact {
@@ -79,7 +79,7 @@
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #aaaaaa;
+  color: black;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;

@@ -68,17 +68,20 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-  # Disable aos animation delay on mobile devices
-  --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/img-1.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding-top: 82px;
 }
 
 #hero:before {
   content: "";
-  background: #e8be82;
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -138,7 +141,6 @@ h6 {
     height: 120vh;
   }
 }
-
 /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/

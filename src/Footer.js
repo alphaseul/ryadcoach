@@ -54,9 +54,9 @@ function Footer() {
                 Tamen quem nulla quae legam multos aute sint culpa legam noster
                 magna
               </p>
-              <form action="" method="post">
+              <form>
                 <input type="email" name="email" />
-                <input type="submit" value="Subscribe" />
+                <input type="submit" value="Enregister" />
               </form>
             </div>
           </div>
