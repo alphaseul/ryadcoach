@@ -21,23 +21,23 @@ function NavBar() {
             <nav className="nav-menu d-lg-block ">
               <ul>
                 <li>
-                  <a href="#header">Acceuil</a>
+                  <a href="/#">Acceuil</a>
                 </li>
                 <li>
-                  <a href="#about">A propos</a>
+                  <a href="/about">A propos</a>
                 </li>
                 <li>
-                  <a href="#services">Services</a>
+                  <a href="/services">Services</a>
                 </li>
                 <li>
-                  <a href="#pricing">Abonnements</a>
+                  <a href="/pricing">Abonnements</a>
                 </li>
                 <li>
-                  <a href="blog.html">Blog</a>
+                  <a href="/blog">Blog</a>
                 </li>
 
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="/contact">Contact</a>
                 </li>
               </ul>
             </nav>
