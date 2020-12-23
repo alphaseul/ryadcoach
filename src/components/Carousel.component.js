@@ -6,7 +6,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class MyCarousel extends Component {
-  state = {};
   render() {
     return (
       <Carousel>
@@ -23,4 +22,3 @@ class MyCarousel extends Component {
   }
 }
 export default MyCarousel;
-//ReactDOM.render(<MyCarousel />, document.querySelector(".demo-carousel"));
