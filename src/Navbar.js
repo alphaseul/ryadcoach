@@ -8,7 +8,7 @@ function NavBar() {
     <header id="header" className="fixed-top">
       <Navbar expand="lg" className="container">
         <h1 className="logo me-auto">
-          <a href="index.html">
+          <a href="/">
             Coach Sportif<span>.</span>
           </a>
         </h1>

@@ -46,9 +46,13 @@ const Login = () => {
           <button className="btn btn-dark btn-lg btn-block" type="submit">
             Connexion
           </button>
-          <button className="btn btn-danger btn-lg btn-block" type="submit">
+          <a
+            href="/inscription"
+            className="btn btn-danger btn-lg btn-block"
+            type="submit"
+          >
             Inscription
-          </button>
+          </a>
         </div>
       </form>
     </div>

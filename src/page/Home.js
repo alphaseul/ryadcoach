@@ -322,7 +322,7 @@ function Home(props) {
                     <li className="na">Massa ultricies mi</li>
                   </ul>
                   <div className="btn-wrap">
-                    <a href="/#" className="btn-buy">
+                    <a href="/inscription" className="btn-buy">
                       Commencer
                     </a>
                   </div>
@@ -347,7 +347,7 @@ function Home(props) {
                     <li className="na">Massa ultricies mi</li>
                   </ul>
                   <div className="btn-wrap">
-                    <a href="/#" className="btn-buy">
+                    <a href="/inscription" className="btn-buy">
                       Commencer
                     </a>
                   </div>
@@ -368,7 +368,7 @@ function Home(props) {
                     <li>Massa ultricies mi</li>
                   </ul>
                   <div className="btn-wrap">
-                    <a href="/#" className="btn-buy">
+                    <a href="/inscription" className="btn-buy">
                       Commencer
                     </a>
                   </div>
