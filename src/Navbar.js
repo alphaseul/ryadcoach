@@ -9,7 +9,7 @@ function NavBar() {
       <Navbar expand="lg" className="container">
         <h1 className="logo me-auto">
           <a href="index.html">
-            Ryad Coach Sportif<span>.</span>
+            Coach Sportif<span>.</span>
           </a>
         </h1>
 
