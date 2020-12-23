@@ -1,14 +1,14 @@
 import "./App.css";
-import Home from "./page/Home";
 import NavBar from "./Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Footer";
+import MyRoute from "./Route";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Home />
+      <MyRoute />
       <Footer />
     </div>
   );

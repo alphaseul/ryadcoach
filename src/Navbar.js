@@ -51,10 +51,10 @@ function NavBar() {
               </a>
               <ul>
                 <li>
-                  <a href="/#">Inscription</a>
+                  <a href="/inscription">Inscription</a>
                 </li>
                 <li>
-                  <a href="/#">Connexion</a>
+                  <a href="/connexion">Connexion</a>
                 </li>
               </ul>
             </li>
