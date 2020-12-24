@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "./img/img-1.jpg";
-import "./css/dashboard.css";
+//import "./css/dashboard.css";
 
 const Dashboard = () => {
   return (
