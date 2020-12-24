@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import MyCarousel from "../components/Carousel.component";
 
-function Home(props) {
+function Home() {
   useEffect(() => {
     AOS.init({
       duration: 2000,

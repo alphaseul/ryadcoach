@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
-#header {
+.headerSide {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,14 +15,14 @@
   overflow-y: auto;
 }
 
-#header .profile img {
+.headerSide .profile img {
   margin: 15px auto;
   display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
 }
 
-#header .profile h1 {
+.headerSide .profile h1 {
   font-size: 24px;
   margin: 0;
   padding: 0;
@@ -32,13 +32,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a,
-#header .profile h1 a:hover {
+.headerSide .profile h1 a,
+.headerSide .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
 
-#header .profile .social-links a {
+.headerSide .profile .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #212431;
@@ -53,7 +53,7 @@
   transition: 0.3s;
 }
 
-#header .profile .social-links a:hover {
+.headerSide .profile .social-links a:hover {
   background: #149ddd;
   color: #fff;
   text-decoration: none;
@@ -76,22 +76,22 @@
   # Navigation Menu
   --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu {
+.nav-menu-side {
   padding-top: 30px;
 }
 
-.nav-menu * {
+.nav-menu-side * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu-side > ul > li {
   position: relative;
   white-space: nowrap;
 }
 
-.nav-menu a {
+.nav-menu-side a {
   display: flex;
   align-items: center;
   color: #a8a9b4;
@@ -101,22 +101,22 @@
   font-size: 15px;
 }
 
-.nav-menu a i {
+.nav-menu-side a i {
   font-size: 24px;
   padding-right: 8px;
   color: #6f7180;
 }
 
-.nav-menu a:hover,
-.nav-menu .active > a,
-.nav-menu li:hover > a {
+.nav-menu-side a:hover,
+.nav-menu-side .active > a,
+.nav-menu-side li:hover > a {
   text-decoration: none;
   color: #fff;
 }
 
-.nav-menu a:hover i,
-.nav-menu .active > a i,
-.nav-menu li:hover > a i {
+.nav-menu-side a:hover i,
+.nav-menu-side .active > a i,
+.nav-menu-side li:hover > a i {
   color: #149ddd;
 }
 
@@ -155,7 +155,7 @@
 /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
-#footer {
+.footer-side {
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
@@ -167,11 +167,11 @@
   background: #040b14;
 }
 
-#footer .copyright {
+.footer-side .copyright {
   text-align: center;
 }
 
-#footer .credits {
+.footer-side .credits {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
@@ -179,7 +179,7 @@
 }
 
 @media (max-width: 1199px) {
-  #footer {
+  .footer-side {
     position: static;
     width: auto;
     padding-right: 20px 15px;

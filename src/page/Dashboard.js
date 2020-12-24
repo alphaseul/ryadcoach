@@ -5,7 +5,7 @@ import "./css/dashboard.css";
 const Dashboard = () => {
   return (
     <div>
-      <header id="header">
+      <div className="headerSide bg-dark" id="header">
         <div className="d-flex flex-column">
           <div className="profile">
             <img src={img1} alt="" className="img-fluid rounded-circle" />
@@ -14,9 +14,9 @@ const Dashboard = () => {
             </h1>
           </div>
 
-          <nav className="nav-menu">
+          <nav className="nav-menu-side">
             <ul>
-              <li className="active">
+              <li>
                 <a href="/">
                   <i className="bx bx-home"></i> <span>Home</span>
                 </a>
@@ -43,18 +43,15 @@ const Dashboard = () => {
               </li>
               <li>
                 <a href="#contact">
-                  <i className="bx bx-envelope"></i> Contact
+                  <i className="bx bx-envelope"></i> Déconnexion
                 </a>
               </li>
             </ul>
           </nav>
-          <button type="button" className="mobile-nav-toggle d-xl-none">
-            <i className="icofont-navigation-menu"></i>
-          </button>
         </div>
-      </header>
+      </div>
 
-      <footer id="footer">
+      <div className="footer-side" id="footer">
         <div className="container">
           <div className="copyright">
             &copy; Copyright{" "}
@@ -66,7 +63,7 @@ const Dashboard = () => {
             Designed by <a href="https://qrcode-protect.com/">Qrcode-protect</a>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
