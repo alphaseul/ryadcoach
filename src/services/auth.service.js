@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API } from "aws-amplify";
 
+const API_URL = " ";
 class AuthService {
   login(email, password) {
     return API.post("User", "/users", {
