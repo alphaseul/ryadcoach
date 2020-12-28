@@ -3,7 +3,6 @@ import "./css/dashboard.css";
 
 const Dashboard = ({ logout, ...rest }) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user);
 
   return (
     <div>
