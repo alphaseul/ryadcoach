@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <div className="App">
         {currentUser ? (
-          <Dashboard />
+          <Dashboard logout={this.logOut} />
         ) : (
           <div>
             <NavBar />

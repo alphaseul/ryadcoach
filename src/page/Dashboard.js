@@ -2,7 +2,7 @@ import React from "react";
 import img1 from "./img/img-1.jpg";
 import "./css/dashboard.css";
 
-const Dashboard = () => {
+const Dashboard = ({ logout, ...rest }) => {
   return (
     <div>
       <div className="headerSide bg-dark" id="header">
@@ -31,18 +31,14 @@ const Dashboard = () => {
                   <i className="bx bx-file-blank"></i> <span>Resume</span>
                 </a>
               </li>
-              <li>
-                <a href="#portfolio">
-                  <i className="bx bx-book-content"></i> Portfolio
-                </a>
-              </li>
+
               <li>
                 <a href="#services">
                   <i className="bx bx-server"></i> Services
                 </a>
               </li>
               <li>
-                <a href="#contact">
+                <a href="/connexion" onClick={logout}>
                   <i className="bx bx-envelope"></i> Déconnexion
                 </a>
               </li>

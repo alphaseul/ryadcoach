@@ -1,7 +1,10 @@
 import axios from "axios";
-import { API } from "aws-amplify";
+import { API, Amplify } from "aws-amplify";
+import awsmobile from "../aws-exports";
 
-const API_URL = " ";
+const API_URL = "/";
+Amplify.configure(awsmobile);
+
 class AuthService {
   login(email, password) {
     return API.post("User", "/users", {
