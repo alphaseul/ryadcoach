@@ -3,12 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
-import Dashboard from "./page/Dashboard";
 import Route from "./Route";
+import RouteSide from "./RouteSideBar";
 import { history } from "./helpers/history";
 import { clearMessage } from "./actions/message";
 import { logout } from "./actions/auth";
 import { connect } from "react-redux";
+import SideBar from "./SideBar";
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +44,10 @@ class App extends Component {
     return (
       <div className="App">
         {currentUser ? (
-          <Dashboard logout={this.logOut} />
+          <div>
+            <SideBar logout={this.logOut} />
+            <RouteSide />
+          </div>
         ) : (
           <div>
             <NavBar />

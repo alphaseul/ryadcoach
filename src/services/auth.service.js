@@ -1,18 +1,9 @@
 import axios from "axios";
 import { API, Amplify } from "aws-amplify";
+import awsmobile from "../aws-exports";
 
 const API_URL = "/";
-Amplify.configure({
-  aws_project_region: "us-east-1",
-  aws_cloud_logic_custom: [
-    {
-      name: "User",
-      endpoint:
-        "https://4wuqds8e35.execute-api.us-east-1.amazonaws.com/staging",
-      region: "us-east-1",
-    },
-  ],
-});
+Amplify.configure(awsmobile);
 
 class AuthService {
   login(email, password) {

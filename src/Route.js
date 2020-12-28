@@ -4,7 +4,7 @@ import Login from "./components/Login.component";
 import Register from "./components/Register.component";
 import Home from "./page/Home";
 
-const MyRoute = () => {
+const MyRoute = (currentUser) => {
   return (
     <Router>
       <Switch>
