@@ -1,16 +1,22 @@
 import React from "react";
-import img1 from "./img/img-1.jpg";
 import "./css/dashboard.css";
 
 const Dashboard = ({ logout, ...rest }) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user);
+
   return (
     <div>
       <div className="headerSide bg-dark" id="header">
         <div className="d-flex flex-column">
           <div className="profile">
-            <img src={img1} alt="" className="img-fluid rounded-circle" />
+            <img
+              src={"http://82.165.184.180:1337" + user.photo_profil.url}
+              alt=""
+              className="img-fluid rounded-circle"
+            />
             <h1 className="text-light">
-              <a href="/">Alex Smith</a>
+              <a href="/">{user.username}</a>
             </h1>
           </div>
 
@@ -33,8 +39,8 @@ const Dashboard = ({ logout, ...rest }) => {
               </li>
 
               <li>
-                <a href="#services">
-                  <i className="bx bx-server"></i> Services
+                <a href="#Profil">
+                  <i className="bx bx-server"></i> Profil
                 </a>
               </li>
               <li>
@@ -46,6 +52,11 @@ const Dashboard = ({ logout, ...rest }) => {
           </nav>
         </div>
       </div>
+
+      <section id="profil" className="container">
+        Nom : {user.username} <br />
+        Email : {user.email}
+      </section>
 
       <div className="footer-side" id="footer">
         <div className="container">
