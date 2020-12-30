@@ -63,6 +63,7 @@ class Login extends Component {
         .then((response) => {
           history.push("/connexion");
           window.location.reload();
+          //console.log(response);
         })
         .catch(() => {
           this.setState({

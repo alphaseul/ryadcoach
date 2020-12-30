@@ -2,7 +2,7 @@ import axios from "axios";
 import { API, Amplify } from "aws-amplify";
 import awsmobile from "../aws-exports";
 
-const API_URL = "/";
+const API_URL = "http://82.165.184.180:1337/";
 Amplify.configure(awsmobile);
 
 class AuthService {

@@ -21,16 +21,19 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "*");
   next();
 });
-var axios = require("axios");
+
 /**********************
  * Example get method *
  **********************/
-
-app.get("/users", function(req, res) {
+var axios = require("axios");
+const YOUTUBE_API_KEY = "AIzaSyDyDAdg_oCt8lAZG2fSZ0dbPaq-z8OF1L4";
+const YOUTUBE_PLAYLIST_ITEMS_API =
+  "https://www.googleapis.com/youtube/v3/playlistItems";
+app.get("/videos", function(req, res) {
   axios
-    .get("http://82.165.184.180:1337/clients", {
-      ...req.params,
-    })
+    .get(
+      `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLOwcP170lVjDhSZOgc3b54CD_r_StTUf-&key=${YOUTUBE_API_KEY}`
+    )
     .then((response) => {
       const data = response.data;
       res.json(data);
@@ -43,7 +46,7 @@ app.get("/users", function(req, res) {
     });
 });
 
-app.get("/users/*", function(req, res) {
+app.get("/videos/*", function(req, res) {
   // Add your code here
   res.json({ success: "get call succeed!", url: req.url });
 });
@@ -52,24 +55,12 @@ app.get("/users/*", function(req, res) {
  * Example post method *
  ****************************/
 
-app.post("/users", function(req, res) {
-  axios
-    .post("http://82.165.184.180:1337/auth/local", {
-      ...req.body,
-    })
-    .then((response) => {
-      const data = response.data;
-      res.json(data);
-    })
-    .catch((err) => {
-      res.json({
-        error: err,
-        user: null,
-      });
-    });
+app.post("/videos", function(req, res) {
+  // Add your code here
+  res.json({ success: "post call succeed!", url: req.url, body: req.body });
 });
 
-app.post("/users/*", function(req, res) {
+app.post("/videos/*", function(req, res) {
   // Add your code here
   res.json({ success: "post call succeed!", url: req.url, body: req.body });
 });
@@ -78,12 +69,12 @@ app.post("/users/*", function(req, res) {
  * Example put method *
  ****************************/
 
-app.put("/users", function(req, res) {
+app.put("/videos", function(req, res) {
   // Add your code here
   res.json({ success: "put call succeed!", url: req.url, body: req.body });
 });
 
-app.put("/users/*", function(req, res) {
+app.put("/videos/*", function(req, res) {
   // Add your code here
   res.json({ success: "put call succeed!", url: req.url, body: req.body });
 });
@@ -92,12 +83,12 @@ app.put("/users/*", function(req, res) {
  * Example delete method *
  ****************************/
 
-app.delete("/users", function(req, res) {
+app.delete("/videos", function(req, res) {
   // Add your code here
   res.json({ success: "delete call succeed!", url: req.url });
 });
 
-app.delete("/users/*", function(req, res) {
+app.delete("/videos/*", function(req, res) {
   // Add your code here
   res.json({ success: "delete call succeed!", url: req.url });
 });

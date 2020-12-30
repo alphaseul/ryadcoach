@@ -33,12 +33,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "User",
+            "videos",
             {
               "Fn::Join": [
                 "",
                 [
-                  "User",
+                  "videos",
                   "-",
                   {
                     "Ref": "env"
@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-amplify3a3d7d2f1c8d4-staging-84004-deployment",
-          "S3Key": "amplify-builds/User-746b4545354e39436a64-build.zip"
+          "S3Key": "amplify-builds/videos-6b53474c51694b772b79-build.zip"
         }
       }
     },
@@ -79,12 +79,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "ryadcoachLambdaRole585637ff",
+            "ryadcoachLambdaRole1a1e4acf",
             {
               "Fn::Join": [
                 "",
                 [
-                  "ryadcoachLambdaRole585637ff",
+                  "ryadcoachLambdaRole1a1e4acf",
                   "-",
                   {
                     "Ref": "env"

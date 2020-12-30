@@ -4,15 +4,19 @@ import Login from "./components/Login.component";
 import Register from "./components/Register.component";
 import Home from "./page/Home";
 
-const MyRoute = (currentUser) => {
+const MyRoute = (props) => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/connexion" component={Login} />
-        <Route path="/inscription" component={Register} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </Router>
+    <div>
+      {!props.currentUser && (
+        <Router>
+          <Switch>
+            <Route path="/connexion" component={Login} />
+            <Route path="/inscription" component={Register} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </Router>
+      )}
+    </div>
   );
 };
 

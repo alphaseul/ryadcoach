@@ -4,12 +4,12 @@ import React, { Component } from "react";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 import Route from "./Route";
-import RouteSide from "./RouteSideBar";
 import { history } from "./helpers/history";
 import { clearMessage } from "./actions/message";
 import { logout } from "./actions/auth";
 import { connect } from "react-redux";
 import SideBar from "./SideBar";
+import { Router } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -43,18 +43,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        {currentUser ? (
-          <div>
-            <SideBar logout={this.logOut} />
-            <RouteSide />
-          </div>
-        ) : (
-          <div>
-            <NavBar />
-            <Route />
-            <Footer />
-          </div>
-        )}
+        <Router history={history}>
+          <NavBar currentUser={currentUser} />
+          <Route currentUser={currentUser} />
+          <SideBar logout={this.logOut} currentUser={currentUser} />
+          <Footer currentUser={currentUser} />
+        </Router>
       </div>
     );
   }

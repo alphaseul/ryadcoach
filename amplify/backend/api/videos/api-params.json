@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/videos",
+            "lambdaFunction": "videos",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/videos"
+        }
+    ],
+    "resourceName": "videos",
+    "apiName": "videos",
+    "functionArns": [
+        {
+            "lambdaFunction": "videos"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplify3a3d7d2f1c8d4-staging-84004-authRole",
+        "unAuthRoleName": "amplify-amplify3a3d7d2f1c8d4-staging-84004-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "videos",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
