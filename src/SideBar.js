@@ -26,9 +26,7 @@ const SideBar = (props) => {
               <nav className="nav-menu-side">
                 <ul>
                   <li>
-                    <Link to="/dashboard">
-                      <i className="bx"></i> Dashboard
-                    </Link>
+                    <Link to="/dashboard">Dashboard</Link>
                   </li>
                   <li>
                     <Link to="/Entrainements">

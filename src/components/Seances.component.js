@@ -25,23 +25,21 @@ class Seances extends Component {
     console.log(data);
     const listVideos = data.map((objectMAp, index) => (
       <div key={objectMAp.id}>
-        <li>
-          <div className="videos ">
-            <Iframe
-              id="player"
-              width="540"
-              height="260"
-              url={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}`}
-              allow="fullscreen"
-            ></Iframe>
-          </div>
-
-          <h3>{objectMAp.snippet.title}</h3>
-        </li>
+        <div className="videos ">
+          <Iframe
+            id="player"
+            url={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1`}
+            allow="fullscreen"
+            frameBorde="0"
+          ></Iframe>
+        </div>
+        <div>
+          <b>{objectMAp.snippet.title}</b>
+        </div>
       </div>
     ));
     return (
-      <div className="entrainement row row-cols-1 row-cols-md-2 g-4">
+      <div className="entrainement row row-cols-1 row-cols-md-2 g-4 mt-3">
         {listVideos}
       </div>
     );

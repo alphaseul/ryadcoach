@@ -1,7 +1,11 @@
 .entrainement {
-  margin-left: 300px;
+  margin-left: 20%;
 }
 .entrainement .videos {
   display: flex;
   justify-content: center;
+}
+#player {
+  width: 540px;
+  height: 260px;
 }
