@@ -1,32 +1,39 @@
 import React from "react";
+import "./sidebar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Dashboard from "./page/Dashboard";
 import Seances from "./components/Seances.component";
-
-const user = JSON.parse(localStorage.getItem("user"));
+import img from "./profil.png";
 
 const SideBar = (props) => {
   return (
     <div>
       {props.currentUser && (
         <Router>
-          <div className="headerSide bg-dark" id="header">
+          <div className="headerSide">
             <div className="d-flex flex-column">
               <div className="profile">
                 <img
-                  src={"http://82.165.184.180:1337" + user.photo_profil.url}
+                  src={
+                    props.currentUser.photo_profil
+                      ? "http://82.165.184.180:1337" +
+                        props.currentUser.photo_profil.url
+                      : img
+                  }
                   alt=""
                   className="img-fluid rounded-circle"
                 />
                 <h1 className="text-light">
-                  <a href="/">{user.username}</a>
+                  <a href="/">
+                    <b>{props.currentUser.username}</b>
+                  </a>
                 </h1>
               </div>
 
               <nav className="nav-menu-side">
                 <ul>
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/mon_profil">Mon Profil</Link>
                   </li>
                   <li>
                     <Link to="/Entrainements">
@@ -42,7 +49,7 @@ const SideBar = (props) => {
                     <a
                       href="/connexion"
                       onClick={props.logout}
-                      style={{ color: "red" }}
+                      style={{ color: "red", marginTop: "100%" }}
                     >
                       <i className="bx "></i> Déconnexion
                     </a>
@@ -66,10 +73,10 @@ const SideBar = (props) => {
             </div>
           </div>
           <Switch>
-            <Route path="/dashboard">
+            <Route path="/mon_profil">
               <Dashboard />
             </Route>
-            <Route path="/entrainements">
+            <Route path="/">
               <Seances />
             </Route>
           </Switch>
