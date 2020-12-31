@@ -5,7 +5,6 @@ import { BiUser } from "react-icons/bi";
 import { Si1Password } from "react-icons/si";
 import { AiOutlineMail } from "react-icons/ai";
 import Form from "react-validation/build/form";
-import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { connect } from "react-redux";
 import { register } from "../actions/auth";
@@ -135,7 +134,7 @@ class Register extends Component {
                     <BiUser />
                   </i>
                 </span>
-                <Input
+                <input
                   type="text"
                   className="form-control"
                   name="username"
@@ -151,7 +150,7 @@ class Register extends Component {
                     <AiOutlineMail />
                   </i>
                 </span>
-                <Input
+                <input
                   type="text"
                   className="form-control"
                   name="email"
@@ -167,7 +166,7 @@ class Register extends Component {
                     <Si1Password />
                   </i>
                 </span>
-                <Input
+                <input
                   type="password"
                   className="form-control"
                   name="password"
@@ -177,8 +176,8 @@ class Register extends Component {
                   validations={[required, vpassword]}
                 />
               </div>
-              <Input type="checkbox" value="remember-me" /> Accepter Les
-              conditions générales d'utilisation
+              <input type="checkbox" value="remember-me" required /> Accepter
+              Les conditions générales d'utilisation
               <button className="btn btn-danger btn-lg btn-block" type="submit">
                 Commencer
               </button>
@@ -201,7 +200,7 @@ class Register extends Component {
                 }
                 role="alert"
               >
-                <b>Bienvenue sur Qrcode CMS {message}</b>
+                <b>Bienvenue {message}</b>
               </div>
             </div>
           )}
