@@ -132,3 +132,13 @@
   display: flex;
   margin-right: 1rem;
 }
+@media (max-width: 992px) {
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-menu ul a {
+    justify-content: space-around;
+    font-size: 24px;
+  }
+}
