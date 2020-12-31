@@ -7,7 +7,7 @@ const Dashboard = (props) => {
   console.log(user);
 
   return (
-    <section id="about" className="about ">
+    <section className="about ">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 d-flex  column justify-content-center">
