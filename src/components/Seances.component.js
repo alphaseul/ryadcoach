@@ -34,7 +34,7 @@ class Seances extends Component {
     if (user.abonnement === true) {
       var listVideos = data.map((objectMAp, index) => (
         <div key={objectMAp.id}>
-          <div className="videos ">
+          <div className="videos vid-margin ">
             <Iframe
               id="player"
               url={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1`}
