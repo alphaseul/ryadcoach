@@ -20,6 +20,13 @@
   padding-right: 2px;
   color: #149ddd;
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 /*--------------------------------------------------------------
 # Facts

@@ -110,11 +110,7 @@
   font-size: 13px;
   color: #eaebf0;
 }
-@media (max-width: 1199px) {
-  .footer-side {
-    margin-left: -1000px;
-  }
-}
+
 /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/
@@ -169,5 +165,8 @@ section {
     width: 100%;
     margin-left: 0;
     padding-left: 20px;
+  }
+  .content {
+    margin-top: 40px;
   }
 }

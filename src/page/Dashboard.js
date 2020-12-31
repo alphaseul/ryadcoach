@@ -7,10 +7,10 @@ const Dashboard = (props) => {
   console.log(user);
 
   return (
-    <section className="about ">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4 d-flex  column justify-content-center">
+    <div className="about">
+      <div className="row">
+        <div className="content ">
+          <div>
             <img
               src={
                 user.photo_profil
@@ -22,75 +22,74 @@ const Dashboard = (props) => {
               width="250px"
             />
           </div>
-          <div className="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Mes Informations</h3>
 
-            <div className="row">
-              <div className="col-lg-6">
-                <ul>
-                  <li>
-                    <i className="icofont-rounded-right"></i>{" "}
-                    <strong>date de naissance:</strong> XX XX XXXX
-                  </li>
+          <h3>Mes Informations</h3>
 
-                  <li>
-                    <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Tel:</strong> +33 XXXXXXXXX
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-6">
-                <ul>
-                  <li>
-                    <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Age:</strong> XX
-                  </li>
+          <div className="row">
+            <div className="col-lg-6">
+              <ul>
+                <li>
+                  <i className="icofont-rounded-right"></i>{" "}
+                  <strong>date de naissance:</strong> XX XX XXXX
+                </li>
 
-                  <li>
-                    <i className="icofont-rounded-right"></i>{" "}
-                    <strong>Email:</strong> {user.email}
-                  </li>
-                </ul>
-              </div>
+                <li>
+                  <i className="icofont-rounded-right"></i>{" "}
+                  <strong>Tel:</strong> +33 XXXXXXXXX
+                </li>
+              </ul>
             </div>
-            <div className="mt-3">
-              <h3>Mes Statistiques</h3>
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div className="count-box">
-                      <span>232</span>
-                      <p>
-                        <strong>XXXXXXXXX</strong>
-                      </p>
-                    </div>
-                  </div>
+            <div className="col-lg-6">
+              <ul>
+                <li>
+                  <i className="icofont-rounded-right"></i>{" "}
+                  <strong>Age:</strong> XX
+                </li>
 
-                  <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div className="count-box">
-                      <span>521</span>
-                      <p>
-                        <strong>XXXXXXXXX</strong>
-                      </p>
-                    </div>
+                <li>
+                  <i className="icofont-rounded-right"></i>{" "}
+                  <strong>Email:</strong> {user.email}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-3">
+            <h3>Mes Statistiques</h3>
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                  <div className="count-box">
+                    <span>232</span>
+                    <p>
+                      <strong>XXXXXXXXX</strong>
+                    </p>
                   </div>
+                </div>
 
-                  <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div className="count-box">
-                      <span>1,463</span>
-                      <p>
-                        <strong>XXXXXXXXX</strong>
-                      </p>
-                    </div>
+                <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                  <div className="count-box">
+                    <span>521</span>
+                    <p>
+                      <strong>XXXXXXXXX</strong>
+                    </p>
                   </div>
+                </div>
 
-                  <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div className="count-box">
-                      <span>15</span>
-                      <p>
-                        <strong>XXXXXXXXX</strong>
-                      </p>
-                    </div>
+                <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                  <div className="count-box">
+                    <span>1,463</span>
+                    <p>
+                      <strong>XXXXXXXXX</strong>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                  <div className="count-box">
+                    <span>15</span>
+                    <p>
+                      <strong>XXXXXXXXX</strong>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -98,7 +97,7 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

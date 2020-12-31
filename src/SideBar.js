@@ -29,7 +29,7 @@ const SideBar = (props) => {
               <GiHamburgerMenu size="45px" />
             </span>
           </div>
-          <div className="headerSide" style={StyleNav}>
+          <nav className="headerSide" style={StyleNav}>
             <div className="d-flex flex-column">
               <div className="profile">
                 <div className="d-flex row">
@@ -98,7 +98,7 @@ const SideBar = (props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </nav>
           <Switch>
             <Route path="/mon_profil">
               <Dashboard />

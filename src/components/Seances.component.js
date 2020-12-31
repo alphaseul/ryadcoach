@@ -51,7 +51,7 @@ class Seances extends Component {
 
     return (
       <div>
-        <div className="entrainement row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div className="entrainement row row-cols-1 row-cols-md-2 g-4">
           {listVideos}
         </div>
         <div className="entrainement">{!user.abonnement && <Abonnement />}</div>
