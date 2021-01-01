@@ -59,7 +59,7 @@ const SideBar = (props) => {
                         : img
                     }
                     alt=""
-                    className="img-fluid rounded-circle"
+                    className="img-fluid rounded-circle image_profile"
                   />
                   <span onClick={closeNav} className="toggle-close">
                     <AiOutlineClose size="30px" />
@@ -103,7 +103,7 @@ const SideBar = (props) => {
               </nav>
             </div>
             <div className="footer-side">
-              <div className="container">
+              <div className="">
                 <div className="copyright">
                   &copy; Copyright{" "}
                   <strong>

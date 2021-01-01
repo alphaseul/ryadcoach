@@ -93,12 +93,13 @@
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 300px;
   z-index: 9999;
   background: #040b14;
+  margin-left: -15px;
 }
 
 .footer-side .copyright {
@@ -172,4 +173,11 @@ section {
   .content {
     margin-top: 40px;
   }
+}
+.image_profile {
+  margin: 15px auto;
+  display: block;
+  height: 80px;
+
+  border: 8px solid #2c2f3f;
 }
