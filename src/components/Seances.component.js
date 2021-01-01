@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import UserService from "../services/user.service";
 import thumbnail from "../page/img/nothumbnail.png";
+import SingleVid from "../page/Singlevid";
+import { Link } from "react-router-dom";
 
 import "./css/seances.css";
 import Abonnement from "./abonnement.component";
@@ -26,6 +28,9 @@ class Seances extends Component {
         });
       });
   }
+  openSingle(url) {
+    return <SingleVid vidLink={url} />;
+  }
 
   render() {
     const data = this.state.content;
@@ -35,9 +40,7 @@ class Seances extends Component {
       var listVideos = data.map((objectMAp, index) => (
         <div key={index}>
           <div className="thumbnail vid-margin ml-1">
-            <a
-              href={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1`}
-            >
+            <Link to={`/${objectMAp.snippet.resourceId.videoId}`}>
               <img
                 src={
                   objectMAp.snippet.thumbnails.default
@@ -47,7 +50,7 @@ class Seances extends Component {
                 alt="thumbnails"
                 className="image"
               />
-            </a>
+            </Link>
           </div>
           <div>
             <b>{objectMAp.snippet.title}</b>

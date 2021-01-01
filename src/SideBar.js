@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Dashboard from "./page/Dashboard";
 import Seances from "./components/Seances.component";
 import img from "./profil.png";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import SingleVid from "./page/Singlevid";
 
 const SideBar = (props) => {
   const [StyleNav, setStyleNav] = useState({});
   const [StyleVid, setStyleVid] = useState({});
   const [StyleToggle, setStyleToggle] = useState({});
+  const [NavActiveStyle, setNavActiveStyle] = useState({});
+  var navActive = 2;
 
   function openNav() {
     setStyleNav({
@@ -37,67 +39,101 @@ const SideBar = (props) => {
       display: "0",
     });
   }
+  function avtiveNav() {
+    setNavActiveStyle({
+      backgroundColor: "black",
+    });
+  }
+
+  useEffect(() => {
+    openNav();
+    avtiveNav();
+  }, []);
 
   return (
     <div>
       {props.currentUser && (
         <Router>
-          <div className="toggle-button d-flex" style={StyleToggle}>
+          <div
+            className="toggle-button d-flex align-items-center"
+            style={StyleToggle}
+          >
             <span onClick={openNav}>
               <GiHamburgerMenu size="45px" />
             </span>
+            <a
+              href="/connexion"
+              onClick={props.logout}
+              style={{ color: "red" }}
+            >
+              Déconnexion
+            </a>
           </div>
-          <nav className="headerSide" style={StyleNav}>
-            <div className="d-flex flex-column">
+          <nav
+            className="headerSide d-flex row justify-content-center "
+            style={StyleNav}
+          >
+            <div className="d-flex flex-column" style={{ width: "100%" }}>
               <div className="profile">
-                <div className="d-flex row">
-                  <img
-                    src={
-                      props.currentUser.photo_profil
-                        ? "http://82.165.184.180:1337" +
-                          props.currentUser.photo_profil.url
-                        : img
-                    }
-                    alt=""
-                    className="img-fluid rounded-circle image_profile"
-                  />
-                  <span onClick={closeNav} className="toggle-close">
-                    <AiOutlineClose size="30px" />
-                  </span>
-                </div>
+                <div className="d-flex flex-column ">
+                  <div>
+                    <span onClick={closeNav} className="float-right mr-2 mt-2">
+                      <FaArrowAltCircleLeft color="white" size="30px" />
+                    </span>
+                  </div>
+                  <div>
+                    <img
+                      src={
+                        props.currentUser.photo_profil
+                          ? "http://82.165.184.180:1337" +
+                            props.currentUser.photo_profil.url
+                          : img
+                      }
+                      alt=""
+                      className="img-fluid rounded-circle image_profile"
+                    />
+                  </div>
 
-                <h1 className="text-light">
-                  <a href="/">
-                    <b>{props.currentUser.username}</b>
-                  </a>
-                </h1>
+                  <div>
+                    <h1 className="text-light">
+                      <a href="/">
+                        <b>{props.currentUser.username}</b>
+                      </a>
+                    </h1>
+                  </div>
+                </div>
               </div>
 
               <nav className="nav-menu-side">
                 <ul>
                   <li>
-                    <Link to="/mon_profil" onClick={closeNav}>
+                    <Link
+                      to="/mon_profil"
+                      onClick={avtiveNav}
+                      style={
+                        navActive === 1
+                          ? NavActiveStyle
+                          : { backgroundColor: "" }
+                      }
+                    >
                       Mon Profil
                     </Link>
                   </li>
                   <li>
-                    <Link to="/Entrainements" onClick={closeNav}>
-                      <i className="bx"></i> <span>Entrainements</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      <i className="bx "></i> <span>Mes Documents</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href="/connexion"
-                      onClick={props.logout}
-                      style={{ color: "red" }}
+                    <Link
+                      to="/entrainements"
+                      onClick={avtiveNav}
+                      style={
+                        navActive === 2
+                          ? NavActiveStyle
+                          : { backgroundColor: "" }
+                      }
                     >
-                      <i className="bx "></i> Déconnexion
-                    </a>
+                      Entrainements
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/">Mes Documents</Link>
                   </li>
                 </ul>
               </nav>
@@ -120,10 +156,19 @@ const SideBar = (props) => {
           <Switch>
             <Route path="/mon_profil">
               <div style={StyleVid}>
-                <Dashboard />
+                <span onClick={closeNav}>
+                  <Dashboard />
+                </span>
               </div>
             </Route>
-            <Route path="/video">
+            <Route path="/entrainements">
+              <div style={StyleVid}>
+                <span onClick={closeNav}>
+                  <Seances />
+                </span>
+              </div>
+            </Route>
+            <Route path="/:id">
               <div style={StyleVid}>
                 <SingleVid />
               </div>

@@ -10,7 +10,6 @@
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  padding: 0 15px;
   overflow-y: auto;
   background-color: #ffa500;
   margin-left: -25%;
@@ -38,11 +37,6 @@
   color: #fff;
   text-decoration: none;
 }
-@media (max-width: 1199px) {
-  .headerSide {
-    margin-left: -1000px;
-  }
-}
 
 /*--------------------------------------------------------------
     # Navigation Menu
@@ -67,23 +61,15 @@
   display: flex;
   justify-content: center;
   color: white;
-  padding: 12px 15px;
+  padding: 12px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 20px;
 }
 
-.nav-menu-side a:hover,
-.nav-menu-side .active > a,
-.nav-menu-side li:hover > a {
+.nav-menu-side ul li a:hover {
   text-decoration: none;
-  color: black;
-}
-
-.nav-menu-side a:hover i,
-.nav-menu-side .active > a i,
-.nav-menu-side li:hover > a i {
-  color: #149ddd;
+  background-color: black;
 }
 
 /*--------------------------------------------------------------
@@ -94,13 +80,12 @@
   color: #f4f6fd;
   font-size: 14px;
   position: relative;
-  left: 0;
-  bottom: 0;
-  width: 300px;
+  width: 100%;
+  margin-right: -15px;
   z-index: 9999;
   background: #040b14;
   margin-left: -15px;
-  margin-top: 100%;
+  margin-top: auto;
 }
 
 .footer-side .copyright {
@@ -114,46 +99,6 @@
   color: #eaebf0;
 }
 
-/*--------------------------------------------------------------
-  # Sections General
-  --------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-.section-bg {
-  background: #f5f8fd;
-}
-
-.section-title {
-  padding-bottom: 30px;
-  margin-left: 20%;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  color: #173b6c;
-}
-
-.section-title h2::after {
-  content: "";
-
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #149ddd;
-  bottom: 0;
-  left: 0;
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
 /*--------------------------------------------------------------
   # button toggle
   --------------------------------------------------------------*/
@@ -181,4 +126,14 @@ section {
   height: 80px;
 
   border: 8px solid #2c2f3f;
+}
+
+.toggle-button {
+  width: 100%;
+}
+
+.toggle-button a {
+  margin-left: auto;
+  margin-right: 10px;
+  font-weight: bold;
 }
