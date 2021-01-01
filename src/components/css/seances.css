@@ -1,16 +1,13 @@
-.entrainement .videos {
+.image {
   display: flex;
-  justify-content: center;
-}
-#player {
-  width: 540px;
-  height: 260px;
-}
-@media (min-width: 1000px) {
-  .entrainement {
-    margin-left: 200px;
-  }
+  width: 100%;
 }
 .vid-margin {
-  margin-top: 45px;
+  margin-top: 50px;
+}
+@media (max-width: 1000px) {
+  .entrainement .videos {
+    display: flex;
+    justify-content: center;
+  }
 }

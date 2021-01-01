@@ -6,17 +6,35 @@ import Seances from "./components/Seances.component";
 import img from "./profil.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import SingleVid from "./page/Singlevid";
 
 const SideBar = (props) => {
   const [StyleNav, setStyleNav] = useState({});
+  const [StyleVid, setStyleVid] = useState({});
+  const [StyleToggle, setStyleToggle] = useState({});
+
   function openNav() {
     setStyleNav({
       marginLeft: "0px",
+    });
+    setStyleVid({
+      marginLeft: "320px",
+      transition: "all ease-in-out 0.5s",
+    });
+    setStyleToggle({
+      display: "none",
     });
   }
   function closeNav() {
     setStyleNav({
       marginLeft: "-1000px",
+    });
+    setStyleVid({
+      marginLeft: "0%",
+      transition: "all ease-in-out 0.5s",
+    });
+    setStyleToggle({
+      display: "0",
     });
   }
 
@@ -24,7 +42,7 @@ const SideBar = (props) => {
     <div>
       {props.currentUser && (
         <Router>
-          <div className="toggle-button d-flex">
+          <div className="toggle-button d-flex" style={StyleToggle}>
             <span onClick={openNav}>
               <GiHamburgerMenu size="45px" />
             </span>
@@ -101,10 +119,19 @@ const SideBar = (props) => {
           </nav>
           <Switch>
             <Route path="/mon_profil">
-              <Dashboard />
+              <div style={StyleVid}>
+                <Dashboard />
+              </div>
+            </Route>
+            <Route path="/video">
+              <div style={StyleVid}>
+                <SingleVid />
+              </div>
             </Route>
             <Route path="/">
-              <Seances />
+              <div style={StyleVid}>
+                <Seances />
+              </div>
             </Route>
           </Switch>
         </Router>

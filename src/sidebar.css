@@ -13,6 +13,7 @@
   padding: 0 15px;
   overflow-y: auto;
   background-color: #ffa500;
+  margin-left: -25%;
 }
 
 .headerSide .profile img {
@@ -156,15 +157,17 @@ section {
   --------------------------------------------------------------*/
 .toggle-button {
   margin-left: 20px;
-  position: absolute;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 20px;
+  color: white;
+  margin-bottom: 20px;
 }
 @media (max-width: 1199px) {
   .toggle-button {
     position: fixed;
-    background-color: #ffa500;
-    width: 100%;
-    margin-left: 0;
-    padding-left: 20px;
   }
   .content {
     margin-top: 40px;

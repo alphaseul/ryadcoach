@@ -17,7 +17,7 @@ const Dashboard = (props) => {
                   ? "http://82.165.184.180:1337" + user.photo_profil.url
                   : img
               }
-              className="img-fluid"
+              className="img-fluid mt-3"
               alt=""
               width="250px"
             />
@@ -26,7 +26,7 @@ const Dashboard = (props) => {
           <h3>Mes Informations</h3>
 
           <div className="row">
-            <div className="col-lg-6">
+            <div className="">
               <ul>
                 <li>
                   <i className="icofont-rounded-right"></i>{" "}
@@ -39,7 +39,7 @@ const Dashboard = (props) => {
                 </li>
               </ul>
             </div>
-            <div className="col-lg-6">
+            <div className="">
               <ul>
                 <li>
                   <i className="icofont-rounded-right"></i>{" "}

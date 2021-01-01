@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../services/user.service";
-import Iframe from "react-iframe";
+import thumbnail from "../page/img/nothumbnail.png";
 
 import "./css/seances.css";
 import Abonnement from "./abonnement.component";
@@ -33,14 +33,21 @@ class Seances extends Component {
 
     if (user.abonnement === true) {
       var listVideos = data.map((objectMAp, index) => (
-        <div key={objectMAp.id}>
-          <div className="videos vid-margin ">
-            <Iframe
-              id="player"
-              url={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1`}
-              allow="fullscreen"
-              frameBorde="0"
-            ></Iframe>
+        <div key={index}>
+          <div className="thumbnail vid-margin ml-1">
+            <a
+              href={`https://www.youtube.com/embed/${objectMAp.snippet.resourceId.videoId}?rel=0&amp;controls=1&amp&amp;showinfo=0&amp;modestbranding=1`}
+            >
+              <img
+                src={
+                  objectMAp.snippet.thumbnails.default
+                    ? objectMAp.snippet.thumbnails.default.url
+                    : thumbnail
+                }
+                alt="thumbnails"
+                className="image"
+              />
+            </a>
           </div>
           <div>
             <b>{objectMAp.snippet.title}</b>
@@ -51,7 +58,7 @@ class Seances extends Component {
 
     return (
       <div>
-        <div className="entrainement row row-cols-1 row-cols-md-2 g-4">
+        <div className="entrainement row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mr-3 ml-3">
           {listVideos}
         </div>
         <div className="entrainement">{!user.abonnement && <Abonnement />}</div>
