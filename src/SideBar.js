@@ -94,7 +94,7 @@ const SideBar = (props) => {
                     <a
                       href="/connexion"
                       onClick={props.logout}
-                      style={{ color: "red", marginTop: "100%" }}
+                      style={{ color: "red" }}
                     >
                       <i className="bx "></i> Déconnexion
                     </a>
