@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./sidebar.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Dashboard from "./page/Dashboard";
 import Seances from "./components/Seances.component";
 import img from "./profil.png";
@@ -12,8 +17,6 @@ const SideBar = (props) => {
   const [StyleNav, setStyleNav] = useState({});
   const [StyleVid, setStyleVid] = useState({});
   const [StyleToggle, setStyleToggle] = useState({});
-  const [NavActiveStyle, setNavActiveStyle] = useState({});
-  var navActive = 2;
 
   function openNav() {
     setStyleNav({
@@ -39,15 +42,9 @@ const SideBar = (props) => {
       display: "0",
     });
   }
-  function avtiveNav() {
-    setNavActiveStyle({
-      backgroundColor: "black",
-    });
-  }
 
   useEffect(() => {
     openNav();
-    avtiveNav();
   }, []);
 
   return (
@@ -107,33 +104,34 @@ const SideBar = (props) => {
               <nav className="nav-menu-side">
                 <ul>
                   <li>
-                    <Link
+                    <NavLink
                       to="/mon_profil"
-                      onClick={avtiveNav}
-                      style={
-                        navActive === 1
-                          ? NavActiveStyle
-                          : { backgroundColor: "" }
-                      }
+                      activeStyle={{
+                        backgroundColor: "black",
+                      }}
                     >
                       Mon Profil
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link
+                    <NavLink
                       to="/entrainements"
-                      onClick={avtiveNav}
-                      style={
-                        navActive === 2
-                          ? NavActiveStyle
-                          : { backgroundColor: "" }
-                      }
+                      activeStyle={{
+                        backgroundColor: "black",
+                      }}
                     >
                       Entrainements
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link to="/">Mes Documents</Link>
+                    <NavLink
+                      to="/mes_documents"
+                      activeStyle={{
+                        backgroundColor: "black",
+                      }}
+                    >
+                      Mes Documents
+                    </NavLink>
                   </li>
                 </ul>
               </nav>
